@@ -1,0 +1,19 @@
+<div class="container-fluid" id="parent">
+    <div class="child">
+      <form name="form">
+        <div>
+          <input id="in"
+                 type="text"
+                 name="task"
+                 placeholder="Add a new task"
+                 required="required"
+                 [(ngModel)]="inputText"
+                 [ngModelOptions]="{standalone: true}" />
+          <button (click)="addTask()">ADD TASK</button>
+        </div>
+        <br />
+        <hr />
+      </form>
+      <app-task [myTasks]="tasks"></app-task>
+    </div>
+</div>
